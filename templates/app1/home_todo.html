@@ -1,0 +1,35 @@
+{% extends 'app1/home_base.html' %}
+{% block content %}
+<div style="display:block" class="container-fluid bg-light" id="form_div" style="margin-top: 2%;text-align:left">
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %}
+            class="{{ message.tags }}"
+            {% endif %}>
+            {{message}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label>Title: </label>
+        {{form.todo_title}}
+        <br>
+        <label>Content: </label>
+        {{form.todo_content}}
+        <div id="the_count2">
+            <span id="current_textarea">0</span>
+            <span id="maximum_textarea">/ 1000</span>
+        </div>
+        <label>Date: </label>
+        {{form.todo_date}}
+        <label>Time: </label>
+        {{form.todo_time}}
+        {{form.todo_username}}
+        <input class="btn btn-primary" type="submit" value="submit" style="margin-left: 25%;"">
+        
+    </form>
+</div>
+{% endblock %}

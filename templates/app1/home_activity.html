@@ -1,0 +1,76 @@
+{% extends 'app1/home_base.html' %}
+{% block content%}
+<div class="container" id="list_div" style="margin-top: 1%;background:white">
+    <ol >
+        {% for l in list %}
+        <li>
+
+            <div class="container" style="padding: 2%;">
+
+
+                <span style="font-weight: bold;">
+                    {{l.todo_title}}
+                </span> <br>
+
+                <span">
+                    {{l.todo_date}}
+                </span>
+
+                <span>
+                    {{l.todo_time}}
+                </span>
+
+                <div style="text-align: right;">
+                    <button class="btn btn-primary" style="margin-left: 1%;" onclick="showTodoDetals({{l.id}})">
+                        Display
+                    </button>
+    
+                    <button  class="btn btn-danger" style="margin-left: 1%;" onclick="deleteTodo({{l.id}})">
+                        Delete
+                    </button>
+
+                </div> 
+            </div> 
+        </li>
+        {% endfor %}
+
+    </ol>
+</div>
+
+<div class="container">
+    <button class="btn btn-primary" onclick="">
+        History
+    </button>
+</div>
+
+
+<div class="container" id="list_div" style="margin-top: 1%;background:white">
+
+    <ol style="display: block;">
+        {% for l_done in list_done %}
+        <li class="" style="padding:1%">
+            <span style="font-weight: bold;">
+                <span style="font-weight: bold;">
+                    {{l_done.todo_title}}
+                </span>
+    
+                <div style="text-align: right;">
+                    <button class="btn btn-primary" style="margin-left: 1%;" onclick="showTodoDetals({{l_done.id}})">
+                        Display
+                    </button>
+    
+                    <button  class="btn btn-danger" style="margin-left: 1%;" onclick="deleteTodo({{l_done.id}})">
+                        Delete
+                    </button>
+    
+                </div> 
+        </li>
+        {% endfor %}
+    </ol>
+
+</div>
+
+
+
+
+{% endblock %}

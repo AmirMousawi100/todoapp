@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+
+    <style>
+        a {
+            margin : 1%
+        }
+    </style>
+</head>
+<body>
+
+    {% for book in books%}
+    <li>
+        <a href="{% url 'book:book-detail' slug=book.slug %}">{{book.title}}</a>
+    </li>
+    {% endfor %}
+
+    {{page_obj}}
+    <div>
+        <span>
+            {% if page_obj.has_previous %}
+            <a href="?page=1">
+                &laquo; first
+            </a>
+            <a href="?page={{ page_obj.previous_page_number}}">
+                previous
+            </a>
+            {% else %}
+            <a >
+                &laquo; first
+            </a>
+            <a>
+                previous
+            </a>
+            {% endif %}
+
+            <span>
+                Page {{page_obj.number}} of {{page_obj.paginator.num_pages}}
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">
+                 next
+            </a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">
+                last &raquo;
+            </a>
+            {% else %}
+            <a >
+                next
+           </a>
+           <a>
+               last &raquo;
+           </a>
+           {% endif %}
+        </span>
+    </div>
+</body>
+</html>

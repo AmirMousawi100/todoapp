@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body style="padding-bottom: 50%;">
+    <div class="container" style="margin-top: 1%;">
+        <nav class="navbar navbar-expand-lg">
+            <a href="" class="navbar-brand">
+                <img src="{% static "nav_icon.png" %}" alt="nav_icon">
+                <span style="color: rgb(232, 21, 21);font-size: larger;font-weight: 700;">todoist</span> </a>
+            <button class="navbar-toggler" data-toggle="collapse" type="button"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="font-weight: bold;"> My Features </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" style="font-weight: bold;">My Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" style="font-weight: bold;">My For Teams</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a  class="nav-link dropdown-toggle" id="navbardropdown" style="font-weight: bold;" 
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                        <div class="dropdown-menu" aria-labelledby="navbardropdown">
+                            <a href="" class="dropdown-item">Integration</a>
+                            <a href="" class="dropdown-item">Getting Started Guide</a>
+                            <a href="" class="dropdown-item">Help Center</a>
+                            <a href="" class="dropdown-item">Productivity Methods + Quiz</a>
+                            <a href="" class="dropdown-item">Blog</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold;">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <div style="align-items: center;text-align: center;">
+        <h1 style="text-align: center; margin-top: 15%;font-size: 45px; font-weight: bold;">
+            Organize your  
+        </h1>
+        <h1 style="text-align: center; font-size: 45px;font-weight: bold;">
+            work and life, finally.
+        </h1>
+
+        <h4 style="text-align: center;" >
+            Become focused, organized, and calm with Todoist.
+        </h4>
+        <h4 style="text-align: center;">
+            The world’s #1 task manager and to-do list app.
+        </h4>
+
+        <button class="btn" style="margin-top: 1%; background-color: rgb(232, 21, 21); color: white;font-weight: bold;">
+            Start for free
+        </button>
+    </div>
+
+    <img src="{% static "main_bg.png"%}" style="width: 100%;">
+
+    <div style="text-align: center;">
+        <p style="font-size: medium">
+            300,000+ REVIEWS
+        </p>
+
+        <img src="{% static "5stars.png"%}" alt="5stars">
+
+        <p style="font-weight: bold;font-size: larger;margin-top: 1%;">
+            App Store and Google Play
+        </p>
+
+        <p style="font-size: medium;">
+            USED BY INDIVIDUALS AND TEAMS<br>AT
+        </p>
+
+        <img src="{% static "brands_icons.png"%}" alt="brands">
+
+    </div>
+
+    <div style="text-align: center ;margin-top: 15%; align-items: center; align-content: center;">
+        <p>Get mode done</p>
+        <p style="font-weight: bold;font-size: x-large;">
+            Add Your Tasks.<br>Organize your life.<br>Achieve more every day.<br></p>
+    
+        <p style="width: 40%;text-align: center; align-self: center;margin: auto;">
+            Add tasks like “Read work emails every day at 10am” to fill your to-do list in seconds using Todoist’s powerful natural language recognition and recurring dates.
+        </p>
+
+        <img src="{% static "pic1.png"%}">
+
+        <p style="font-size: small;">Clear your mind</p>
+
+        <p style="font-size: xx-large;">
+            Reach that mental clarity<br> you’ve been longing for.
+        </p>
+
+        <p style="font-weight: bold;">
+            Your to-do lists are automatically sorted into Today, Upcoming and custom Filter views<br> to help you focus on your most important things.
+        </p>
+
+        <img src="{% static "pic2.png"%}">
+        </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

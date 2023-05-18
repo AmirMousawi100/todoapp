@@ -1,0 +1,19 @@
+input {
+    margin: 1%;
+}
+textarea {
+    margin: 1%;
+    width: 98%;
+}
+label {
+    margin-left: 1%;
+}
+
+body {
+    background-color: aqua;
+}
+
+#the_count {
+    margin-left: 3%;
+}
+
