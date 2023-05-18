@@ -16,5 +16,6 @@ urlpatterns = [
     path("delete/<int:id>", views.delete_todo),
     path("done/<int:id>", views.done_todo),
     path("account", views.account),
-    path("todo_id", views.todoid)
+    path("todo_id", views.todoid),
+    path("myapp", views.home_todo)
 ]
